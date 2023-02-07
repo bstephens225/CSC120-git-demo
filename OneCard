@@ -1,0 +1,27 @@
+class OneCard:
+    owner: str=""
+    balance: float = 0.0
+
+    def __init__(self,name,starting_balance)->None:
+        self.owner=name
+        self.balance=starting_balance
+
+def main():
+    my_card=OneCard("bethany", 63.0)
+    print(my_card)
+    print(my_card.owner, "has", my_card.balance, "on card")
+    print(canAfford(my_card, 70))
+
+def canAfford(self, cost) -> bool:
+    if (cost>self.balance):
+        return False
+    else:
+        return True
+
+def deposit(self, amount) -> None:
+    self.balance += amount
+
+def spend(self, amt)->None:
+    if (self.canAfford):self.balance-=amt
+
+main()
